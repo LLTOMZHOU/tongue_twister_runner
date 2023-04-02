@@ -10,6 +10,12 @@ public class Obstacle : MonoBehaviour
     
     private Rigidbody2D rb2D;
 
+
+    public void SetMoveSpeed(float speed)
+    {
+        this.speed = speed;
+    }
+    
     void Start()
     {
         rb2D = GetComponent<Rigidbody2D>();
