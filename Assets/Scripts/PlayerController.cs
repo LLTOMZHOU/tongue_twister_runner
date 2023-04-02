@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 /**
@@ -8,14 +9,26 @@ public class PlayerController : MonoBehaviour
     public float maxSpeed = 5f;
     public float acceleration = 5f;
     public float boundaryPadding = 0.5f;
+    public int lives = 3;
 
     private Rigidbody2D rb2D;
     private Vector2 screenBounds;
     private float objectWidth;
     private float objectHeight;
 
+    public float damageFlashDuration = 0.1f;
+    public float shakeDuration = 0.15f;
+    public float shakeMagnitude = 0.01f;
+    private SpriteRenderer spriteRenderer;
+    private Vector3 originalPosition;
+    
+    private bool isShaking = false;
+    
     void Start()
     {
+        spriteRenderer = GetComponent<SpriteRenderer>();
+        originalPosition = transform.position;
+        
         rb2D = GetComponent<Rigidbody2D>();
         rb2D.gravityScale = 0; // Disable gravity for the character
 
@@ -23,12 +36,32 @@ public class PlayerController : MonoBehaviour
         screenBounds = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, Camera.main.transform.position.z));
 
         // Get object dimensions
-        objectWidth = GetComponent<SpriteRenderer>().bounds.extents.x;
-        objectHeight = GetComponent<SpriteRenderer>().bounds.extents.y;
+        objectWidth = spriteRenderer.bounds.extents.x;
+        objectHeight = spriteRenderer.bounds.extents.y;
     }
 
+    public void LoseLife()
+    {
+        lives--;
+        StartCoroutine(FlashRed());
+        StartCoroutine(Shake());
+        if(lives <= 0)
+        {
+            Die();
+        }
+    }
+
+    void Die()
+    {
+        Debug.Log("You died!");
+        Destroy(gameObject,0.3f);
+    }
     void Update()
     {
+        if (isShaking)
+        {
+            return;
+        }
         float moveHorizontal = Input.GetAxis("Horizontal");
         float moveVertical = Input.GetAxis("Vertical");
 
@@ -54,5 +87,32 @@ public class PlayerController : MonoBehaviour
             Mathf.Clamp(transform.position.y, -screenBounds.y + objectHeight + boundaryPadding, screenBounds.y - objectHeight - boundaryPadding),
             transform.position.z
         );
+    }
+    
+    private IEnumerator FlashRed()
+    {
+        spriteRenderer.color = Color.red;
+        yield return new WaitForSeconds(damageFlashDuration);
+        spriteRenderer.color = Color.white;
+    }
+
+    private IEnumerator Shake()
+    {
+        
+        float elapsed = 0f;
+
+        while (elapsed < shakeDuration)
+        {
+            float x = Random.Range(-1f, 1f) * shakeMagnitude;
+            float y = Random.Range(-1f, 1f) * shakeMagnitude;
+
+            transform.position = new Vector3(originalPosition.x + x, originalPosition.y + y, originalPosition.z);
+
+            elapsed += Time.deltaTime;
+            yield return null;
+        }
+
+        transform.position = originalPosition;
+        isShaking = false;
     }
 }
