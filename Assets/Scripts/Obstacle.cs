@@ -37,7 +37,12 @@ public class Obstacle : MonoBehaviour
                 if (playerController != null)
                 {
                     playerController.LoseLife();
+                    AudioManager.Instance.PlayHurt();
                 }
+            }
+            else
+            { 
+                AudioManager.Instance.PlayNotHurt();
             }
             Destroy(gameObject);
         }

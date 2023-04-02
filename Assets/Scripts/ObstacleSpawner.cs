@@ -51,7 +51,7 @@ public class ObstacleSpawner : MonoBehaviour
             if (timer > minTime + timeRange * (levelControl.rankMax - levelControl.rank) / levelControl.rankMax)
             {
                 timer = 0.0f;
-                Spawn(minTime + timeRange * (levelControl.rankMax - levelControl.rank) / levelControl.rankMax, Mathf.max(levelControl.rank / levelControl.rankMax * 0.4f, 0.5f));
+                Spawn(minTime + timeRange * (levelControl.rankMax - levelControl.rank) / levelControl.rankMax, Mathf.Max(levelControl.rank / levelControl.rankMax * 0.4f, 0.5f));
             }
         }
     }
