@@ -425,8 +425,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   musicSource: {fileID: 224860868}
   sfxSource: {fileID: 224860867}
-  musicClips: []
-  hurtClip: {fileID: 8300000, guid: 991a5bb4e87ea4cc78881a80b4a09fc3, type: 3}
+  musicClips:
+  - {fileID: 8300000, guid: ac686f8d0e89a4088bdad79cb4739877, type: 3}
+  - {fileID: 8300000, guid: dae4cf8062c6a4f50932347bf0822c31, type: 3}
+  hurtClip: {fileID: 8300000, guid: 6c3f495b367d740f99393e66c47697f9, type: 3}
   notHurtClip: {fileID: 8300000, guid: d03d6bd80b614430798b0282c88b1c84, type: 3}
 --- !u!4 &224860870
 Transform:
