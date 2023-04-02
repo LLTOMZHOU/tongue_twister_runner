@@ -423,8 +423,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a054d9bf1da044598ace624cca540e4f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  musicSource: {fileID: 0}
-  sfxSource: {fileID: 0}
+  musicSource: {fileID: 224860868}
+  sfxSource: {fileID: 224860867}
   musicClips: []
   hurtClip: {fileID: 8300000, guid: 991a5bb4e87ea4cc78881a80b4a09fc3, type: 3}
   notHurtClip: {fileID: 8300000, guid: d03d6bd80b614430798b0282c88b1c84, type: 3}
@@ -690,6 +690,48 @@ MonoBehaviour:
       spawnPosUp: {x: 18, y: -8.5, z: 0}
       spawnPosDown: {x: 18, y: -9, z: 0}
       movable: 0
+  - hitables:
+    - prefab: {fileID: 1392759423234211868, guid: df4acfc4ab04d44439c01ba6bf007ddb, type: 3}
+      spawnPosUp: {x: 18, y: 5, z: 0}
+      spawnPosDown: {x: 18, y: 0, z: 0}
+      movable: 0
+    - prefab: {fileID: 1392759423234211868, guid: 6ca3841e4ace5477ca78b8782f15df47, type: 3}
+      spawnPosUp: {x: 18, y: 2, z: 0}
+      spawnPosDown: {x: 18, y: -1, z: 0}
+      movable: 0
+    - prefab: {fileID: 1392759423234211868, guid: a7e8ff97926c0462580b52006ae5a9ce, type: 3}
+      spawnPosUp: {x: 18, y: -3, z: 0}
+      spawnPosDown: {x: 18, y: -4.5, z: 0}
+      movable: 1
+    - prefab: {fileID: 1392759423234211868, guid: 5e75aaa42ea4343c4a6a0f739e640129, type: 3}
+      spawnPosUp: {x: 18, y: -3, z: 0}
+      spawnPosDown: {x: 18, y: -4.5, z: 0}
+      movable: 1
+    - prefab: {fileID: 1392759423234211868, guid: 0e0ab6b2bab494b3aaffa29f72528ef5, type: 3}
+      spawnPosUp: {x: 18, y: 4, z: 0}
+      spawnPosDown: {x: 18, y: 2.5, z: 0}
+      movable: 0
+    nonHitables:
+    - prefab: {fileID: 1392759423234211868, guid: 94c037e40883b4ac0916171e427c1d59, type: 3}
+      spawnPosUp: {x: 18, y: -8.2, z: 0}
+      spawnPosDown: {x: 18, y: -9, z: 0}
+      movable: 0
+    - prefab: {fileID: 1392759423234211868, guid: 82914203465a841528776f9b1812abe2, type: 3}
+      spawnPosUp: {x: 18, y: -6, z: 0}
+      spawnPosDown: {x: 18, y: -7.5, z: 0}
+      movable: 1
+    - prefab: {fileID: 1392759423234211868, guid: f3f5344347d9b4a758c03ebc6ed17df9, type: 3}
+      spawnPosUp: {x: 18, y: 7, z: 0}
+      spawnPosDown: {x: 18, y: 5, z: 0}
+      movable: 0
+    - prefab: {fileID: 1392759423234211868, guid: b79b1df09be6143f4b8dab71b43894f7, type: 3}
+      spawnPosUp: {x: 18, y: -2, z: 0}
+      spawnPosDown: {x: 18, y: -4.5, z: 0}
+      movable: 0
+    - prefab: {fileID: 1392759423234211868, guid: f52711b0b765741c6957eba6b843e613, type: 3}
+      spawnPosUp: {x: 18, y: -8.5, z: 0}
+      spawnPosDown: {x: 18, y: -9, z: 0}
+      movable: 0
   minTime: 0.5
   timeRange: 3
   waitCountMax: 4
@@ -707,7 +749,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29545fa858243cc4b98bbd6838a3e29a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelLength: 60
+  levelLength: 30
   mObSpawn: {fileID: 755118398}
   mBGControl: {fileID: 0}
   initGlobalSpeed: 3.5
@@ -717,7 +759,7 @@ MonoBehaviour:
   rankMin: 0
   rankMax: 10
   randIncreaseRate: 0.2
-  sceneIdxMax: 1
+  sceneIdxMax: 2
   transitTime: 3
 --- !u!4 &755118400
 Transform:

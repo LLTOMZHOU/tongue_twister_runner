@@ -12,8 +12,9 @@ GameObject:
   - component: {fileID: 2608564953513869366}
   - component: {fileID: 6035802397935067559}
   - component: {fileID: 4932042347366412219}
+  - component: {fileID: 2907930390962891510}
   m_Layer: 0
-  m_Name: Generic Obstacle
+  m_Name: skirt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -75,7 +76,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 315821474, guid: 4ca52f7739f004bed9d3c452b0a2ef33, type: 3}
+  m_Sprite: {fileID: -601473879, guid: 8b17c866025b4442caa4b738a496849a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -100,8 +101,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isHarmful: 1
   speed: 3
-  sentence: Jenny put on her her jazzy jacket
-  word: jacket
+  sentence: nice skirt, but starts with an "s"
+  word: skirt
 --- !u!50 &4932042347366412219
 Rigidbody2D:
   serializedVersion: 4
@@ -123,3 +124,77 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!60 &2907930390962891510
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1392759423234211868}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 2.47, y: 2.2}
+    newSize: {x: 3.7, y: 2.51}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 1.235, y: -0.7}
+      - {x: 1.225, y: -0.59}
+      - {x: 1.155, y: -0.099999994}
+      - {x: 1.145, y: 0.07}
+      - {x: 1.125, y: 0.24}
+      - {x: 1.0849999, y: 0.29}
+      - {x: 1.115, y: 0.47}
+      - {x: 1.155, y: 0.76}
+      - {x: 1.155, y: 0.78999996}
+      - {x: 1.125, y: 0.84}
+      - {x: 0.97499996, y: 0.83}
+      - {x: 0.97499996, y: 0.81}
+      - {x: 0.39499998, y: 0.81}
+      - {x: 0.385, y: 0.82}
+      - {x: 0.105, y: 0.85999995}
+      - {x: -0.235, y: 0.94}
+      - {x: -0.36499998, y: 1.01}
+      - {x: -0.42499998, y: 1.1}
+      - {x: -0.48499998, y: 1.1}
+      - {x: -0.49499997, y: 1.0799999}
+      - {x: -0.525, y: 0.96}
+      - {x: -0.625, y: 0.65}
+      - {x: -0.645, y: 0.57}
+      - {x: -0.73499995, y: 0.47}
+      - {x: -0.835, y: 0.31}
+      - {x: -1.165, y: -0.17}
+      - {x: -1.235, y: -0.28}
+      - {x: -1.235, y: -0.37}
+      - {x: -1.095, y: -0.53}
+      - {x: -1.0649999, y: -0.59}
+      - {x: -0.895, y: -0.74}
+      - {x: -0.805, y: -0.76}
+      - {x: -0.72499996, y: -0.78}
+      - {x: -0.515, y: -0.81}
+      - {x: -0.435, y: -0.83}
+      - {x: -0.355, y: -0.90999997}
+      - {x: -0.265, y: -0.93}
+      - {x: -0.145, y: -0.96999997}
+      - {x: -0.005, y: -0.97999996}
+      - {x: 0.035, y: -0.96}
+      - {x: 0.055, y: -0.82}
+      - {x: 0.095, y: -0.88}
+      - {x: 0.255, y: -1.03}
+      - {x: 0.415, y: -1.0799999}
+      - {x: 0.53499997, y: -1.09}
+      - {x: 0.60499996, y: -1.0699999}
+      - {x: 0.745, y: -1.1}
+      - {x: 1.0649999, y: -1.1}
+      - {x: 1.235, y: -0.93}

@@ -12,8 +12,9 @@ GameObject:
   - component: {fileID: 2608564953513869366}
   - component: {fileID: 6035802397935067559}
   - component: {fileID: 4932042347366412219}
+  - component: {fileID: 253493962900395987}
   m_Layer: 0
-  m_Name: Generic Obstacle
+  m_Name: gloves
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -75,7 +76,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 315821474, guid: 4ca52f7739f004bed9d3c452b0a2ef33, type: 3}
+  m_Sprite: {fileID: -169787092, guid: a4e9f0e7c448540d6b3cdda105b4b405, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -100,8 +101,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isHarmful: 1
   speed: 3
-  sentence: Jenny put on her her jazzy jacket
-  word: jacket
+  sentence: Nothing to love about a pair of gloves
+  word: gloves
 --- !u!50 &4932042347366412219
 Rigidbody2D:
   serializedVersion: 4
@@ -123,3 +124,73 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!60 &253493962900395987
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1392759423234211868}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 2.12, y: 2.76}
+    newSize: {x: 3.7, y: 2.51}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.42, y: -0.91999996}
+      - {x: 0.55, y: -0.59}
+      - {x: 0.59999996, y: -0.44}
+      - {x: 0.66999996, y: -0.17}
+      - {x: 0.71, y: 0.04}
+      - {x: 0.75, y: 0.28}
+      - {x: 0.75, y: 0.64}
+      - {x: 0.74, y: 0.75}
+      - {x: 0.71999997, y: 0.89}
+      - {x: 0.69, y: 1.05}
+      - {x: 0.59, y: 1.23}
+      - {x: 0.5, y: 1.3199999}
+      - {x: 0.42, y: 1.36}
+      - {x: 0.29, y: 1.36}
+      - {x: 0.21, y: 1.35}
+      - {x: 0.12, y: 1.29}
+      - {x: -0.04, y: 1.14}
+      - {x: -0.14999999, y: 0.98999995}
+      - {x: -0.24, y: 0.84}
+      - {x: -0.39999998, y: 0.51}
+      - {x: -0.45999998, y: 0.44}
+      - {x: -0.59999996, y: 0.57}
+      - {x: -0.75, y: 0.65999997}
+      - {x: -0.83, y: 0.66999996}
+      - {x: -0.90999997, y: 0.66999996}
+      - {x: -0.98999995, y: 0.64}
+      - {x: -1.04, y: 0.59}
+      - {x: -1.06, y: 0.55}
+      - {x: -1.06, y: 0.29999998}
+      - {x: -1.03, y: 0.19}
+      - {x: -0.95, y: 0.06}
+      - {x: -0.9, y: -0.01}
+      - {x: -0.75, y: -0.17}
+      - {x: -0.82, y: -0.45}
+      - {x: -0.85999995, y: -0.56}
+      - {x: -0.9, y: -0.76}
+      - {x: -0.9, y: -0.83}
+      - {x: -0.79999995, y: -0.94}
+      - {x: -0.63, y: -1.03}
+      - {x: -0.48999998, y: -1.09}
+      - {x: -0.26999998, y: -1.12}
+      - {x: 0.06, y: -1.12}
+      - {x: 0.28, y: -1.1}
+      - {x: 0.39, y: -1.0699999}
+      - {x: 0.41, y: -1.04}
