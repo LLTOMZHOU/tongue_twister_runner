@@ -7,7 +7,8 @@ public class BGControl : MonoBehaviour
     public float BGInitialSpeed;
     private float BGSpeed;
     private Renderer mRenderer;
-    private List<Material> backgrounds;
+    [SerializeField]
+    private List<Texture> backgrounds;
     private void Awake()
     {
         mRenderer = GetComponent<Renderer>();
@@ -22,7 +23,11 @@ public class BGControl : MonoBehaviour
 
     public void NextBG(int sceneIdx)
     {
-        
+        Debug.Log("Called Once@!");
+        if (sceneIdx == 0) return;
+        mRenderer.material.SetTexture("_Maintex", backgrounds[sceneIdx - 1]);
+        mRenderer.material.SetTexture("_SecondTex", backgrounds[sceneIdx]);
+        StartCoroutine(ChangeBG(sceneIdx));
     }
 
     IEnumerator ChangeBG(int sceneIdx)
@@ -30,7 +35,7 @@ public class BGControl : MonoBehaviour
         float timer = 0.0f;
         while (timer < 3.0f)
         {
-            mRenderer.material.Lerp(backgrounds[sceneIdx - 1], backgrounds[sceneIdx], timer / 3.0f);
+            mRenderer.material.SetFloat("_Blend", timer / 3.0f);
             yield return null;
             timer += Time.deltaTime;
         }

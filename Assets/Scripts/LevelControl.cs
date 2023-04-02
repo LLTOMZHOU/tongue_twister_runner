@@ -16,6 +16,8 @@ public class LevelControl : MonoBehaviour
     public float randIncreaseRate = 0.5f;
     public int sceneIdxMax = 0;
     public float transitTime = 5.0f;
+    public List<GameObject> twisters;
+    public List<Vector3> twisterSpawnPos;
     public float timer { get; private set; }
     public float globalSpeed { get; private set; }
     public float rank { get; private set; }
@@ -69,6 +71,9 @@ public class LevelControl : MonoBehaviour
 
     IEnumerator Transit()
     {
+        Debug.Log("called transit");
+        mBGControl.NextBG(sceneIdx);
+        Instantiate(twisters[sceneIdx], twisterSpawnPos[sceneIdx], Quaternion.identity);
         yield return new WaitForSeconds(transitTime);
         mObSpawn.StartSpawn();
         inTransit = false;

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5433732821122238795}
   - component: {fileID: 5433732821122238792}
   - component: {fileID: 5433732821122238793}
-  - component: {fileID: 5433732821122238794}
+  - component: {fileID: 8086103555336224815}
   m_Layer: 0
   m_Name: First Twister
   m_TagString: Untagged
@@ -176,7 +176,7 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_renderer: {fileID: 5433732821122238792}
   m_maskType: 0
---- !u!114 &5433732821122238794
+--- !u!114 &8086103555336224815
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -185,10 +185,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 5433732821122240182}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf0574a6af3d57a41b1bd9f5187d4196, type: 3}
+  m_Script: {fileID: 11500000, guid: 63bb04b445c134744bbf6ce0249b3671, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   moveTimeLength: 1
   waitTime: 4
   disTime: 1
-  targetDestination: {x: 2, y: 1.2, z: 0}
+  targetDestination: {x: 0, y: 0, z: 0}

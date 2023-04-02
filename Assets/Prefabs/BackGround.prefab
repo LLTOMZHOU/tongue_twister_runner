@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7368507385932569644}
   - component: {fileID: 7368507385932569643}
   - component: {fileID: 7368507385932569642}
-  - component: {fileID: 7368507385932569646}
+  - component: {fileID: 2577497239553663749}
   m_Layer: 0
   m_Name: BackGround
   m_TagString: Untagged
@@ -99,7 +99,7 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &7368507385932569646
+--- !u!114 &2577497239553663749
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -108,11 +108,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 7368507385932569641}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a8af6d1f4c6422943a174492013687a5, type: 3}
+  m_Script: {fileID: 11500000, guid: c7650397c9d94430180b259b201f7d8d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   BGInitialSpeed: 1
   backgrounds:
-  - {fileID: 2800000, guid: 0c512b5705283e24ca4d20286e938555, type: 3}
-  - {fileID: 2800000, guid: eb0d88701db226a49bb92dcdb2b985d2, type: 3}
-  - {fileID: 2800000, guid: b11960039848d654883d5e9c3ac5e3e5, type: 3}
+  - {fileID: 2800000, guid: 11eceb811ad9d4cf1909efd391db3d28, type: 3}
+  - {fileID: 2800000, guid: f0b19cfaf7f754409addbc61f3bc0592, type: 3}
+  - {fileID: 2800000, guid: ee1e40f2884864a1bbaca6b08ecc4a4d, type: 3}
