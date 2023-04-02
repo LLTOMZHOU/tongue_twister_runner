@@ -6,6 +6,7 @@ using UnityEngine;
 public class ObstacleSpawner : MonoBehaviour
 {
     public LevelControl levelControl;
+    public float scaleUp = 1.5f;
     [Serializable]
     public struct SceneList
     {
@@ -50,7 +51,7 @@ public class ObstacleSpawner : MonoBehaviour
             if (timer > minTime + timeRange * (levelControl.rankMax - levelControl.rank) / levelControl.rankMax)
             {
                 timer = 0.0f;
-                Spawn(minTime + timeRange * (levelControl.rankMax - levelControl.rank) / levelControl.rankMax, levelControl.rank / levelControl.rankMax);
+                Spawn(minTime + timeRange * (levelControl.rankMax - levelControl.rank) / levelControl.rankMax, Mathf.max(levelControl.rank / levelControl.rankMax * 0.4f, 0.5f));
             }
         }
     }
@@ -139,7 +140,16 @@ public class ObstacleSpawner : MonoBehaviour
             case 3:
                 break;
         }
-
+        
+        // scale up
+        if (ob != null)
+        {
+            ob.transform.localScale = new Vector3(ob.transform.localScale.x * scaleUp, ob.transform.localScale.y * scaleUp, ob.transform.localScale.z * scaleUp);
+        }
+        if (ob2 != null)
+        {
+            ob2.transform.localScale = new Vector3(ob2.transform.localScale.x * scaleUp, ob2.transform.localScale.y * scaleUp, ob2.transform.localScale.z * scaleUp);
+        }
         if (movable)
         {
             ob.SetMoveSpeed(levelControl.globalSpeed + (float)(rand.NextDouble()) * extraSpeedMax);

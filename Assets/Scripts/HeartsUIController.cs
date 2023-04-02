@@ -5,7 +5,7 @@ using UnityEngine.UI;
 public class HeartsUIController : MonoBehaviour
 {
     public GameObject heartPrefab;
-    public int initialLives = 3;
+    private int initialLives = 3;
     public float heartSpacing = 10f;
 
     private List<Image> hearts;
@@ -13,6 +13,8 @@ public class HeartsUIController : MonoBehaviour
     void Start()
     {
         hearts = new List<Image>();
+        // get initial lives from the player controller
+        initialLives = FindObjectOfType<PlayerController>().lives;
 
         for (int i = 0; i < initialLives; i++)
         {

@@ -403,7 +403,50 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   levelControl: {fileID: 755118399}
-  sceneLists: []
+  scaleUp: 1.5
+  sceneLists:
+  - hitables:
+    - prefab: {fileID: 1392759423234211868, guid: 94042add731254db7a0d68686670cb37, type: 3}
+      spawnPosUp: {x: 18, y: 5, z: 0}
+      spawnPosDown: {x: 18, y: 0, z: 0}
+      movable: 0
+    - prefab: {fileID: 1392759423234211868, guid: 3144c468193174e56bf29f9bc3034607, type: 3}
+      spawnPosUp: {x: 18, y: 2, z: 0}
+      spawnPosDown: {x: 18, y: -1, z: 0}
+      movable: 0
+    - prefab: {fileID: 1392759423234211868, guid: 6332ae461439643df9df20dff7eb250c, type: 3}
+      spawnPosUp: {x: 18, y: -3, z: 0}
+      spawnPosDown: {x: 18, y: -4.5, z: 0}
+      movable: 1
+    - prefab: {fileID: 1392759423234211868, guid: b976db1917856409db77fd9523cc7db6, type: 3}
+      spawnPosUp: {x: 18, y: -3, z: 0}
+      spawnPosDown: {x: 18, y: -4.5, z: 0}
+      movable: 1
+    - prefab: {fileID: 1392759423234211868, guid: 6c1b9d3a5453a4ec391976247eff2bf2, type: 3}
+      spawnPosUp: {x: 18, y: 4, z: 0}
+      spawnPosDown: {x: 18, y: 2.5, z: 0}
+      movable: 0
+    nonHitables:
+    - prefab: {fileID: 1392759423234211868, guid: a8bd493324b174d089e6eff3e269d31b, type: 3}
+      spawnPosUp: {x: 18, y: -8.2, z: 0}
+      spawnPosDown: {x: 18, y: -9, z: 0}
+      movable: 0
+    - prefab: {fileID: 1392759423234211868, guid: 51679dbba5853473ba76b06c2b1ca1ac, type: 3}
+      spawnPosUp: {x: 18, y: -6, z: 0}
+      spawnPosDown: {x: 18, y: -7.5, z: 0}
+      movable: 1
+    - prefab: {fileID: 1392759423234211868, guid: 64cff0ba770224d18a397b4d9e069ee2, type: 3}
+      spawnPosUp: {x: 18, y: 7, z: 0}
+      spawnPosDown: {x: 18, y: 5, z: 0}
+      movable: 0
+    - prefab: {fileID: 1392759423234211868, guid: 7ead05f4e6c7e481a98371d112ad4612, type: 3}
+      spawnPosUp: {x: 18, y: -2, z: 0}
+      spawnPosDown: {x: 18, y: -4.5, z: 0}
+      movable: 0
+    - prefab: {fileID: 1392759423234211868, guid: 6dc44ab7845d34f0eae57f80222acdbb, type: 3}
+      spawnPosUp: {x: 18, y: -8.5, z: 0}
+      spawnPosDown: {x: 18, y: -9, z: 0}
+      movable: 0
   minTime: 0.5
   timeRange: 3
   waitCountMax: 4
@@ -421,18 +464,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29545fa858243cc4b98bbd6838a3e29a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelLength: 30
+  levelLength: 60
   mObSpawn: {fileID: 755118398}
   mBGControl: {fileID: 0}
-  initGlobalSpeed: 2
-  globalSpeedMin: 2
-  globalSpeedMax: 5
-  globalSpeedIncreaseRate: 0.05
+  initGlobalSpeed: 3
+  globalSpeedMin: 3
+  globalSpeedMax: 7
+  globalSpeedIncreaseRate: 0.1
   rankMin: 0
   rankMax: 10
-  randIncreaseRate: 0.5
+  randIncreaseRate: 0.2
   sceneIdxMax: 1
-  transitTime: 5
+  transitTime: 3
 --- !u!4 &755118400
 Transform:
   m_ObjectHideFlags: 0
@@ -498,7 +541,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   heartPrefab: {fileID: 6800246373943155268, guid: 2e5a40b622a59440192c42a1432c3803, type: 3}
-  initialLives: 3
   heartSpacing: 10
 --- !u!1 &1298764730
 GameObject:
@@ -1009,7 +1051,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: New Text
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1072,7 +1114,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: -325.7016, y: 0, z: -330.82266, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -1113,11 +1155,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2539955218321863728, guid: 41534f5e07e8b4953b14527758be4f22, type: 3}
       propertyPath: maxSpeed
-      value: 8
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 2539955218321863728, guid: 41534f5e07e8b4953b14527758be4f22, type: 3}
       propertyPath: acceleration
-      value: 30
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 2539955218321863728, guid: 41534f5e07e8b4953b14527758be4f22, type: 3}
       propertyPath: shakeMagnitude
@@ -1126,6 +1168,18 @@ PrefabInstance:
     - target: {fileID: 2539955218321863729, guid: 41534f5e07e8b4953b14527758be4f22, type: 3}
       propertyPath: m_RootOrder
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2539955218321863729, guid: 41534f5e07e8b4953b14527758be4f22, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2539955218321863729, guid: 41534f5e07e8b4953b14527758be4f22, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2539955218321863729, guid: 41534f5e07e8b4953b14527758be4f22, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: 2539955218321863729, guid: 41534f5e07e8b4953b14527758be4f22, type: 3}
       propertyPath: m_LocalPosition.x

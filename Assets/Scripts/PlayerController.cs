@@ -72,19 +72,20 @@ public class PlayerController : MonoBehaviour
 
         // Calculate the new velocity based on input
         Vector2 inputDirection = new Vector2(moveHorizontal, moveVertical);
-        Vector2 newVelocity = rb2D.velocity + inputDirection * acceleration * Time.deltaTime;
-
-        // Adjust the magnitude of the new velocity
-        if (newVelocity.magnitude > maxSpeed)
-        {
-            newVelocity = newVelocity.normalized * maxSpeed;
-        }
-        if(inputDirection.magnitude == 0)
-        {
-            newVelocity = new Vector2(0, 0);
-        }
-        // Set the new velocity
-        rb2D.velocity = newVelocity;
+        rb2D.velocity = inputDirection * maxSpeed;
+        // Vector2 newVelocity = rb2D.velocity + inputDirection * acceleration * Time.deltaTime;
+        //
+        // // Adjust the magnitude of the new velocity
+        // if (newVelocity.magnitude > maxSpeed)
+        // {
+        //     newVelocity = newVelocity.normalized * maxSpeed;
+        // }
+        // if(inputDirection.magnitude == 0)
+        // {
+        //     newVelocity = new Vector2(0, 0);
+        // }
+        // // Set the new velocity
+        // rb2D.velocity = newVelocity;
 
         // Keep the character within the screen boundary
         transform.position = new Vector3(
