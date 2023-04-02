@@ -21,7 +21,7 @@ public class PlayerController : MonoBehaviour
     public float shakeMagnitude = 0.01f;
     private SpriteRenderer spriteRenderer;
     private Vector3 originalPosition;
-    
+    private HeartsUIController heartsUIController;
     private bool isShaking = false;
     
     void Start()
@@ -38,11 +38,15 @@ public class PlayerController : MonoBehaviour
         // Get object dimensions
         objectWidth = spriteRenderer.bounds.extents.x;
         objectHeight = spriteRenderer.bounds.extents.y;
+        
+        // Get the HeartsUIController
+        heartsUIController = FindObjectOfType<HeartsUIController>();
     }
 
     public void LoseLife()
     {
         lives--;
+        heartsUIController.UpdateHearts(lives);
         StartCoroutine(FlashRed());
         StartCoroutine(Shake());
         if(lives <= 0)
@@ -58,6 +62,7 @@ public class PlayerController : MonoBehaviour
     }
     void Update()
     {
+        originalPosition = transform.position;
         if (isShaking)
         {
             return;

@@ -101,6 +101,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isHarmful: 1
   speed: 3
+  sentence: Jenny put on her her jazzy jacket
+  word: jacket
 --- !u!50 &4932042347366412219
 Rigidbody2D:
   serializedVersion: 4
